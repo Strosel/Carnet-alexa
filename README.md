@@ -22,7 +22,7 @@ Save, build and enjoy.
 `Alexa ask car net stop heating my car`
 
 ## Don't have an Echo?
-Look no further than (here)[] or the https version. Great for automation with IFTTT
+Look no further than [here](https://github.com/Strosel/Carnet-http) or the https version. Great for automation with IFTTT
 
 ## Huge Thank you to
 @robinostlund: https://github.com/robinostlund/volkswagen-carnet
