@@ -1,0 +1,148 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "task",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "window-heating",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "climat",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "charge",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "heating",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "BatteryInfoIntent",
+        "samples": [
+          "how much battery my car has",
+          "how much battery does my car have",
+          "what battery percentage is my car at",
+          "how charged is my car"
+        ],
+        "slots": []
+      },
+      {
+        "name": "ChargeInfoIntent",
+        "samples": [
+          "is my car charging",
+          "my car is charging",
+          "if my car is charging"
+        ],
+        "slots": []
+      },
+      {
+        "name": "DistanceInfoIntent",
+        "samples": [
+          "how far my car has driven",
+          "how far my car's driven"
+        ],
+        "slots": []
+      },
+      {
+        "name": "HeatInfoIntent",
+        "samples": [
+          "if my car's heat is on",
+          "if my car's climate control is on",
+          "if my car's window heating is on",
+          "is my car heating",
+          "is my car's heating on",
+          "is my car's climate control on",
+          "is my car's window heating on"
+        ],
+        "slots": []
+      },
+      {
+        "name": "InfoIntent",
+        "samples": [
+          "what's the status of my car",
+          "what's my car's status",
+          "get the info of my car",
+          "get my car's info",
+          "get info",
+          "get status"
+        ],
+        "slots": []
+      },
+      {
+        "name": "LocationInfoIntent",
+        "samples": [
+          "Where my car is",
+          "where's my car",
+          "get the location of my car",
+          "locate my car"
+        ],
+        "slots": []
+      },
+      {
+        "name": "StartTaskIntent",
+        "samples": [
+          "start {task}",
+          "Begin {task}",
+          "activate {task}",
+          "start {task} my car",
+          "Begin {task} my car"
+        ],
+        "slots": [
+          {
+            "name": "task",
+            "type": "task"
+          }
+        ]
+      },
+      {
+        "name": "StopTaskIntent",
+        "samples": [
+          "Stop {task}",
+          "end {task}",
+          "deactivate {task}",
+          "Stop {task} my car",
+          "end {task} my car"
+        ],
+        "slots": [
+          {
+            "name": "task",
+            "type": "task"
+          }
+        ]
+      }
+    ],
+    "invocationName": "car net"
+  }
+}
