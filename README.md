@@ -13,13 +13,13 @@ Copy and paste the contents of `inteactionmodel.json` into the code section of t
 Save, build and enjoy.
 
 ## A small list of things to ask Alexa
-`Alexa ask car net how much battery my car has`
-`Alexa ask car net if my car is charging`
-`Alexa ask car net, is my car heating`
-`Alexa ask car net. What's the status of my car`
-`Alexa ask car net where my car is`
-`Alexa ask car net start charging my car`
-`Alexa ask car net stop heating my car`
+`Alexa ask car net how much battery my car has`<br>
+`Alexa ask car net if my car is charging`<br>
+`Alexa ask car net where my car is`<br>
+`Alexa ask car net start charging my car`<br>
+`Alexa ask car net stop heating my car`<br>
+`Alexa ask car net, is my car heating?`<br>
+`Alexa ask car net. What's the status of my car?`
 
 ## Don't have an Echo?
 Look no further than (here)[] or the https version. Great for automation with IFTTT
