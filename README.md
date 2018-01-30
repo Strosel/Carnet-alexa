@@ -12,6 +12,8 @@ In the Amazon developer console create a new Alexa Skill and link it to the func
 Copy and paste the contents of `inteactionmodel.json` into the code section of the Skill builder.<br>
 Save, build and enjoy.
 
+###Don't have an Echo?
+Look no further than (here)[] or the https version. Great for automation with IFTTT
 
 ## Huge Thank you to
 @robinostlund: https://github.com/robinostlund/volkswagen-carnet

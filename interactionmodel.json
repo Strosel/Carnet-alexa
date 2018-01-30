@@ -78,6 +78,7 @@
       {
         "name": "HeatInfoIntent",
         "samples": [
+          "if my car's heating",
           "if my car's heat is on",
           "if my car's climate control is on",
           "if my car's window heating is on",
