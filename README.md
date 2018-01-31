@@ -22,7 +22,7 @@ Save, build and enjoy.
 `Alexa ask car net. What's the status of my car?`
 
 ## Don't have an Echo?
-Look no further than [here](https://github.com/Strosel/Carnet-http) for the https version. Great for automation with IFTTT
+Look no further than [here](https://github.com/Strosel/Carnet_http) for the https version. Great for automation with IFTTT
 
 ## Huge Thank you to
 @robinostlund: https://github.com/robinostlund/volkswagen-carnet
