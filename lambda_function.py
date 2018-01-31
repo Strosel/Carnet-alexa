@@ -357,7 +357,8 @@ class VWCarnet(object):
 def main(event, context):
 
     vw = VWCarnet(event['request'])
-    vw._carnet_do_action()
+    if vw.talk != "":
+        vw._carnet_do_action()
     response = {
         "version": "1.0",
         "response": {
