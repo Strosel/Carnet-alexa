@@ -6,7 +6,7 @@ Give Alexa the power to control your car from anywhere
 * Amazon AWS & developer accounts
 * A carnet-enabled Volkswagen
 
-Upload `lambda_function.py` and the  `modules` folder as a .zip file to a new lambda function with `lambda_function.main` as the handler.<br>
+Upload `lambda_function.py` and the  `modules` folder as a .zip file to a new lambda function with `lambda_function.main` as the handler and a timeout of 1min 30s or more.<br>
 Add your username and password to `lambda_function.py` in the `VWCarnet` constructor.<br>
 In the Amazon developer console create a new Alexa Skill with "car net" as the invocation name.<br>
 In "Interaction Model" open the skill builder and upload `inteactionmodel.json` in the code section.<br>
