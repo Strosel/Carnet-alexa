@@ -170,19 +170,17 @@ class VWCarnet(object):
         vehicle_data_messages = json.loads(self._carnet_post( '/-/msgc/get-new-messages'))
         vehicle_data_location = json.loads(self._carnet_post('/-/cf/get-location'))
 
-        if True:
-            # request vehicle details, takes some time to get
-            self._carnet_post('/-/vsr/request-vsr')
+        # request vehicle details, takes some time to get
+        self._carnet_post('/-/vsr/request-vsr')
+        vehicle_data_status = json.loads(self._carnet_post('/-/vsr/get-vsr'))
+        counter = 0
+        while vehicle_data_status['vehicleStatusData']['requestStatus'] == 'REQUEST_IN_PROGRESS':
             vehicle_data_status = json.loads(self._carnet_post('/-/vsr/get-vsr'))
-            counter = 0
-            while vehicle_data_status['vehicleStatusData']['requestStatus'] == 'REQUEST_IN_PROGRESS':
-                vehicle_data_status = json.loads(self._carnet_post('/-/vsr/get-vsr'))
-                counter +=1
-                time.sleep(1)
-                if counter > self.timeout_counter:
-                    break
-        else:
-            vehicle_data_status = json.loads(self._carnet_post('/-/vsr/get-vsr'))
+            counter +=1
+            time.sleep(1)
+            if counter > self.timeout_counter:
+                break
+
         vehicle_data_details = json.loads(self._carnet_post('/-/vehicle-info/get-vehicle-details'))
         vehicle_data_emanager = json.loads(self._carnet_post('/-/emanager/get-emanager'))
 
