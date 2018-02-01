@@ -1,0 +1,35 @@
+How much battery my car has
+How much battery does my car have
+What battery percentage is my car at
+How charged is my car
+Is my car charging
+If my car is charging
+How far my car has driven
+How far my car's driven
+If my car's heat is on
+If my car's climate control is on
+If my car's window heating is on
+Is my car heating
+Is my car's heating on
+Is my car's climate control on
+Is my car's window heating on
+What's the status of my car
+What's my car's status
+Get the info of my car
+Get my car's info
+Get info
+Get status
+Where my car is
+Where's my car
+Get the location of my car
+Locate my car
+Start {task}
+Begin {task}
+Activate {task}
+Start {task} my car
+Begin {task} my car
+Stop {task}
+End {task}
+Deactivate {task}
+Stop {task} my car
+End {task} my car

@@ -21,7 +21,8 @@ Save and enjoy.
 `Alexa ask car net start charging my car`<br>
 `Alexa ask car net stop heating my car`<br>
 `Alexa ask car net, is my car heating?`<br>
-`Alexa ask car net. What's the status of my car?`
+`Alexa ask car net. What's the status of my car?`<br>
+For more, check the `Complete_list_of_commands.txt`
 
 ## Don't have an Echo?
 Look no further than [here](https://github.com/Strosel/Carnet_http) for the http version. Great for automation with IFTTT
