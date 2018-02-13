@@ -19,15 +19,12 @@ class VWCarnet(object):
         self.talk = ""
         self.carnet_username = ""
         self.carnet_password = ""
-        if args['type'] == "IntentRequest":
-            self.intent = args['intent']['name']
-            if "Info" in self.intent:
-                self.carnet_task = args['intent']['name'][:-10]
-            else:
-                self.carnet_task = args['intent']['slots']['task']['value']
-        elif args['type'] == "LaunchRequest" or "InfoIntent" in args['type']:
+        if args['type'] == "LaunchRequest" or "InfoIntent" in args['intent']['name']:
             self.intent = "Info"
-            self.carnet_task = args['type'].replace("InfoIntent","")
+            self.carnet_task = args['intent']['name'].replace("InfoIntent","")
+        elif args['type'] == "IntentRequest":
+            self.intent = args['intent']['name']
+            self.carnet_task = args['intent']['slots']['task']['value']
 
         # Fake the VW CarNet mobile app headers
         self.headers = { 'Accept': 'application/json, text/plain, */*', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0.1; D5803 Build/23.5.A.1.291; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36' }
@@ -281,7 +278,7 @@ class VWCarnet(object):
                 self.talk += "I stopped %s for you" % (self.carnet_task)
 
     def _carnet_do_action(self):
-        if "Info" in self.intent:
+        if self.intent == "Info":
             self._carnet_print_carnet_info()
             return True
         elif self.intent == "StartTaskIntent":
