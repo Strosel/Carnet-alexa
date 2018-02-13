@@ -21,7 +21,10 @@ class VWCarnet(object):
         self.carnet_password = ""
         if args['type'] == "LaunchRequest" or "InfoIntent" in args['intent']['name']:
             self.intent = "Info"
-            self.carnet_task = args['intent']['name'].replace("InfoIntent","")
+            try:
+                self.carnet_task = args['intent']['name'].replace("InfoIntent","")
+            except:
+                pass
         elif args['type'] == "IntentRequest":
             self.intent = args['intent']['name']
             self.carnet_task = args['intent']['slots']['task']['value']
