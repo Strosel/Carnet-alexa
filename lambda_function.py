@@ -24,7 +24,7 @@ class VWCarnet(object):
             try:
                 self.carnet_task = args['intent']['name'].replace("InfoIntent","")
             except:
-                pass
+                self.carnet_task = ""
         elif args['type'] == "IntentRequest":
             self.intent = args['intent']['name']
             self.carnet_task = args['intent']['slots']['task']['value']
