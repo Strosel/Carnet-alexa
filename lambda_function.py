@@ -21,7 +21,10 @@ class VWCarnet(object):
         self.carnet_password = ""
         if args['type'] == "IntentRequest":
             self.intent = args['intent']['name']
-            self.carnet_task = args['intent']['slots']['task']['value']
+            if "Info" in self.intent:
+                self.carnet_task = args['intent']['name'][:-10]
+            else:
+                self.carnet_task = args['intent']['slots']['task']['value']
         elif args['type'] == "LaunchRequest" or "InfoIntent" in args['type']:
             self.intent = "Info"
             self.carnet_task = args['type'].replace("InfoIntent","")
@@ -243,7 +246,7 @@ class VWCarnet(object):
         elif vehicle_data['emanager']['EManager']['rpc']['status']['windowHeatingStateFront'] == "OFF" and vehicle_data['emanager']['EManager']['rpc']['status']['windowHeatingStateRear'] == "OFF":
             windowstate = "not heating"
 
-        if self.carnet_task == "" or self.carnet_task == "LaunchRequest":
+        if self.carnet_task == "":
             if vehicle_data['emanager']['EManager']['rbc']['status']['extPowerSupplyState'] == "AVAILABLE" and vehicle_data['emanager']['EManager']['rbc']['status']['pluginState'] == "DISCONNECTED":
                 self.talk += "Your car has driven "+str(vehicle_data['details']['vehicleDetails']['distanceCovered']).replace('.','')+"km, The battery is charging and currently at "+str(vehicle_data['emanager']['EManager']['rbc']['status']['batteryPercentage'])+"%, The climate-control is "+str(vehicle_data['emanager']['EManager']['rpc']['status']['climatisationState'])+", Windows are "+windowstate+" and "+addr
             if vehicle_data['emanager']['EManager']['rbc']['status']['extPowerSupplyState'] == "AVAILABLE" and vehicle_data['emanager']['EManager']['rbc']['status']['pluginState'] != "DISCONNECTED":
@@ -278,7 +281,7 @@ class VWCarnet(object):
                 self.talk += "I stopped %s for you" % (self.carnet_task)
 
     def _carnet_do_action(self):
-        if self.intent == "Info":
+        if "Info" in self.intent:
             self._carnet_print_carnet_info()
             return True
         elif self.intent == "StartTaskIntent":
